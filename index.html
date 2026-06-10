@@ -7,12 +7,17 @@
   <meta name="description" content="YB STUDIO — от нуля до монетизации и дохода в долларах на YouTube. AI-каналы, ниши, контент, который приносит деньги." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__blob aurora__blob--1"></span>
+    <span class="aurora__blob aurora__blob--2"></span>
+    <span class="aurora__blob aurora__blob--3"></span>
+  </div>
+  <div class="spotlight" aria-hidden="true"></div>
   <div class="bg-noise" aria-hidden="true"></div>
 
   <!-- NAV -->
@@ -40,64 +45,85 @@
 
   <!-- HERO -->
   <main class="hero">
+    <span class="hero__ghost" aria-hidden="true">YOUTUBE</span>
+
     <div class="container hero__inner">
       <div class="hero__content">
-        <span class="eyebrow">
+        <span class="eyebrow reveal" style="--d:0s">
           <span class="eyebrow__dot"></span>
           Закрытая студия по американскому YouTube
         </span>
 
         <h1 class="hero__title">
-          Превращаем YouTube
-          <br />
-          в доход <span class="accent">в долларах</span>
+          <span class="reveal" style="--d:.05s">Твой YouTube,</span>
+          <span class="reveal" style="--d:.12s">который платит</span>
+          <span class="reveal hero__title-accent" style="--d:.19s">
+            <span class="accent">в долларах</span>
+            <svg class="underline" viewBox="0 0 300 24" fill="none" preserveAspectRatio="none">
+              <path d="M3 18C70 6 230 4 297 14" stroke="url(#ug)" stroke-width="6" stroke-linecap="round"/>
+              <defs><linearGradient id="ug" x1="0" y1="0" x2="300" y2="0">
+                <stop stop-color="#ff2e2e"/><stop offset="1" stop-color="#ff6a3d"/>
+              </linearGradient></defs>
+            </svg>
+          </span>
         </h1>
 
-        <p class="hero__lead">
-          YB STUDIO — это система от Евгения, который заработал на YouTube
-          более $60 000. Внутри: гайды от ниши до монетизации, разборы кейсов,
-          актуальные ниши каждую неделю, чат и эфиры. Без воды и «выкладывай по графику».
+        <p class="hero__lead reveal" style="--d:.28s">
+          YB STUDIO — система от Евгения, который заработал на YouTube
+          <b>более $60 000</b>. Гайды от ниши до монетизации, разборы кейсов,
+          свежие ниши каждую неделю, чат и эфиры. Без воды.
         </p>
 
-        <div class="hero__actions">
+        <div class="hero__actions reveal" style="--d:.36s">
           <a href="https://t.me/trapluww" target="_blank" rel="noopener" class="btn btn--primary">
-            Попасть в студию
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Попасть в студию</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="https://t.me/yevheniifeedback" target="_blank" rel="noopener" class="btn btn--line">Смотреть отзывы</a>
+          <a href="https://t.me/yevheniifeedback" target="_blank" rel="noopener" class="btn btn--line">
+            <span class="play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            Смотреть отзывы
+          </a>
         </div>
 
-        <div class="hero__stats">
+        <div class="hero__stats reveal" style="--d:.46s">
           <div class="stat">
-            <span class="stat__num">$60K<span>+</span></span>
+            <span class="stat__num" data-count="60" data-prefix="$" data-suffix="K+">$0</span>
             <span class="stat__label">заработано на YouTube</span>
           </div>
           <div class="stat__div"></div>
           <div class="stat">
-            <span class="stat__num">50<span>+</span></span>
+            <span class="stat__num" data-count="50" data-suffix="+">0</span>
             <span class="stat__label">гайдов и разборов</span>
           </div>
           <div class="stat__div"></div>
           <div class="stat">
-            <span class="stat__num">12<span>+</span></span>
-            <span class="stat__label">ниш разобрано в деталях</span>
+            <span class="stat__num" data-count="12" data-suffix="+">0</span>
+            <span class="stat__label">ниш разобрано</span>
           </div>
         </div>
       </div>
 
-      <!-- VISUAL: место под фото/скрин -->
+      <!-- VISUAL -->
       <div class="hero__visual">
-        <div class="visual-card">
-          <div class="visual-card__photo" role="img" aria-label="Евгений, основатель YB STUDIO"></div>
+        <div class="tilt" id="tilt">
+          <div class="visual-card">
+            <span class="visual-card__ring" aria-hidden="true"></span>
+            <div class="visual-card__photo" role="img" aria-label="Евгений, основатель YB STUDIO"></div>
 
-          <div class="visual-card__badge visual-card__badge--top">
-            <span class="dot dot--green"></span>
-            Монетизация включена
-          </div>
+            <div class="chip chip--top floaty" style="--f:0s">
+              <span class="dot dot--green"></span>
+              Монетизация включена
+            </div>
 
-          <div class="visual-card__badge visual-card__badge--bottom">
-            <span class="badge__num">$60,000+</span>
-            <span class="badge__sub">заработано основателем</span>
+            <div class="chip chip--mid floaty" style="--f:1.2s">
+              <span class="chip__ico">▶</span>
+              500K+ просмотров
+            </div>
+
+            <div class="chip chip--bottom floaty" style="--f:.6s">
+              <span class="chip__num">$60,000+</span>
+              <span class="chip__sub">заработано основателем</span>
+            </div>
           </div>
         </div>
       </div>
@@ -107,35 +133,37 @@
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
         <div class="marquee__group">
-          <span>AI-каналы</span><i>•</i>
-          <span>Выбор ниши</span><i>•</i>
-          <span>Сценарии</span><i>•</i>
-          <span>Монтаж</span><i>•</i>
-          <span>Монетизация</span><i>•</i>
-          <span>Доход в $</span><i>•</i>
-          <span>AI-каналы</span><i>•</i>
-          <span>Выбор ниши</span><i>•</i>
-          <span>Сценарии</span><i>•</i>
-          <span>Монтаж</span><i>•</i>
-          <span>Монетизация</span><i>•</i>
-          <span>Доход в $</span><i>•</i>
+          <span>AI-каналы</span><i>◆</i>
+          <span>Выбор ниши</span><i>◆</i>
+          <span>Сценарии</span><i>◆</i>
+          <span>Монтаж</span><i>◆</i>
+          <span>Монетизация</span><i>◆</i>
+          <span>Доход в $</span><i>◆</i>
+          <span>AI-каналы</span><i>◆</i>
+          <span>Выбор ниши</span><i>◆</i>
+          <span>Сценарии</span><i>◆</i>
+          <span>Монтаж</span><i>◆</i>
+          <span>Монетизация</span><i>◆</i>
+          <span>Доход в $</span><i>◆</i>
         </div>
         <div class="marquee__group">
-          <span>AI-каналы</span><i>•</i>
-          <span>Выбор ниши</span><i>•</i>
-          <span>Сценарии</span><i>•</i>
-          <span>Монтаж</span><i>•</i>
-          <span>Монетизация</span><i>•</i>
-          <span>Доход в $</span><i>•</i>
-          <span>AI-каналы</span><i>•</i>
-          <span>Выбор ниши</span><i>•</i>
-          <span>Сценарии</span><i>•</i>
-          <span>Монтаж</span><i>•</i>
-          <span>Монетизация</span><i>•</i>
-          <span>Доход в $</span><i>•</i>
+          <span>AI-каналы</span><i>◆</i>
+          <span>Выбор ниши</span><i>◆</i>
+          <span>Сценарии</span><i>◆</i>
+          <span>Монтаж</span><i>◆</i>
+          <span>Монетизация</span><i>◆</i>
+          <span>Доход в $</span><i>◆</i>
+          <span>AI-каналы</span><i>◆</i>
+          <span>Выбор ниши</span><i>◆</i>
+          <span>Сценарии</span><i>◆</i>
+          <span>Монтаж</span><i>◆</i>
+          <span>Монетизация</span><i>◆</i>
+          <span>Доход в $</span><i>◆</i>
         </div>
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
