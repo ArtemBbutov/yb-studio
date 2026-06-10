@@ -20,6 +20,10 @@
   <div class="spotlight" aria-hidden="true"></div>
   <div class="bg-noise" aria-hidden="true"></div>
 
+  <!-- кастомный курсор -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
   <!-- NAV -->
   <header class="nav">
     <div class="container nav__inner">
@@ -59,12 +63,6 @@
           <span class="reveal" style="--d:.12s">который платит</span>
           <span class="reveal hero__title-accent" style="--d:.19s">
             <span class="accent">в долларах</span>
-            <svg class="underline" viewBox="0 0 300 24" fill="none" preserveAspectRatio="none">
-              <path d="M3 18C70 6 230 4 297 14" stroke="url(#ug)" stroke-width="6" stroke-linecap="round"/>
-              <defs><linearGradient id="ug" x1="0" y1="0" x2="300" y2="0">
-                <stop stop-color="#ff2e2e"/><stop offset="1" stop-color="#ff6a3d"/>
-              </linearGradient></defs>
-            </svg>
           </span>
         </h1>
 
@@ -104,26 +102,25 @@
       </div>
 
       <!-- VISUAL -->
-      <div class="hero__visual">
-        <div class="tilt" id="tilt">
-          <div class="visual-card">
-            <span class="visual-card__ring" aria-hidden="true"></span>
-            <div class="visual-card__photo" role="img" aria-label="Евгений, основатель YB STUDIO"></div>
+      <div class="hero__visual reveal" style="--d:.3s">
+        <div class="photo">
+          <span class="photo__glow" aria-hidden="true"></span>
+          <span class="photo__corner photo__corner--tl" aria-hidden="true"></span>
+          <span class="photo__corner photo__corner--br" aria-hidden="true"></span>
 
-            <div class="chip chip--top floaty" style="--f:0s">
-              <span class="dot dot--green"></span>
-              Монетизация включена
-            </div>
+          <div class="photo__frame">
+            <img src="evg11.jpg" alt="Евгений, основатель YB STUDIO" class="photo__img" />
+            <span class="photo__name">Евгений<small>основатель YB STUDIO</small></span>
+          </div>
 
-            <div class="chip chip--mid floaty" style="--f:1.2s">
-              <span class="chip__ico">▶</span>
-              500K+ просмотров
-            </div>
+          <div class="chip chip--top">
+            <span class="dot dot--green"></span>
+            Монетизация включена
+          </div>
 
-            <div class="chip chip--bottom floaty" style="--f:.6s">
-              <span class="chip__num">$60,000+</span>
-              <span class="chip__sub">заработано основателем</span>
-            </div>
+          <div class="chip chip--bottom">
+            <span class="chip__num">$60,000+</span>
+            <span class="chip__sub">заработано на YouTube</span>
           </div>
         </div>
       </div>
